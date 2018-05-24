@@ -2,7 +2,7 @@
 
 ## Resources to learn more about arrays: 
 
-###Videos 
+### Videos 
 
 Fundamentals--
 https://www.youtube.com/watch?v=5tPLyHCZdU0
