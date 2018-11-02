@@ -7,6 +7,8 @@ Find: O(1)
 Union: 0(N)
 
 Problem: Takes n^2 array accesses to process N sequence of union commands.
+Union to expensive.
+Trees are flat, but to expensive to keep them flat.
 */
 
 #include <iostream>

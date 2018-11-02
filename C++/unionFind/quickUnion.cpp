@@ -1,6 +1,16 @@
-//Quick Union Data Structure
-//Lazy approach
+/*Quick Union Data Structure
+Lazy approach
 
+Costs:
+Initialization: O(N)
+Find: O(N)
+Union: 0(N*)
+*Includes costs of find.
+
+Problem: Trees can get tall.
+Find to expensive.
+Need to do find to do union.
+*/
 #include <iostream>
 #include <vector>
 
@@ -21,7 +31,7 @@ class QuickUnion{
 		bool connected(int p, int q) ;
 
 		//Change root of p to point to the root of q.
-		void unir(int p, int q) ;
+		void unite(int p, int q) ;
 };
 
 QuickUnion::QuickUnion(int n ){
@@ -42,16 +52,16 @@ bool QuickUnion::connected(int p, int q){
 }
 
 
-void QuickUnion::unir(int p, int q) {
+void QuickUnion::unite(int p, int q) {
 	int oldRoot = root(p) ;
 	int newRoot = root(q) ;
 	id[oldRoot] = newRoot ;
 }
 
 int main(){
-	QuickUnion prueba(5) ;
-	prueba.unir(1, 2) ;
-	cout << prueba.connected(1, 2) ;
-	cout << endl << prueba.connected(3,4) << endl ;
+	QuickUnion test(5) ;
+	test.unite(1, 2) ;
+	cout << test.connected(1, 2) ;
+	cout << endl << test.connected(3,4) << endl ;
 	return 0 ;
 }
